@@ -14,6 +14,14 @@ fastify.post('/registro', require('./src/registro'));
 fastify.post('/login', require('./src/login'));
 fastify.get('/usuario/checktoken', require('./src/checktoken'));
 
+// API para CRUD categorías
+fastify.route({
+    method: ['GET', 'POST', 'PUT', 'DELETE'],
+    url: '/categoria',
+    handler: require('./src/categoria')
+});
+
+
 /* fastify.post('/registro', async (request, reply) => {
     
     //   GET -> recuperar lo que mandamos en js
