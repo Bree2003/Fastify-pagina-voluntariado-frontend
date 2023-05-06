@@ -2,9 +2,9 @@ const { admin } = require('./firebase');
 
 module.exports = async (request, response) => {
     try {
-        const cabeceraAutenticacion = request.headers.authorization; /* [0]Bearer [1]fdjkfdsoisnfjkdlyrj */
-        console.dir(cabeceraAutenticacion);
-        const bearer = cabeceraAutenticacion.split(' ');
+        const headerAutorizacion = request.headers.authorization; /* [0]Bearer [1]fdjkfdsoisnfjkdlyrj */
+        console.dir(headerAutorizacion);
+        const bearer = headerAutorizacion.split(' ');
         const token = bearer[1];
         console.log(token);
         const usuario = await admin.auth().verifyIdToken(token);

@@ -12,7 +12,7 @@ fastify.get('/', async (request, reply) => {
 // ejemplo de otra ruta
 fastify.post('/registro', require('./src/registro'));
 fastify.post('/login', require('./src/login'));
-fastify.post('/usuario/checktoken', require('./src/checktoken'));
+fastify.get('/usuario/checktoken', require('./src/checktoken'));
 
 /* fastify.post('/registro', async (request, reply) => {
     

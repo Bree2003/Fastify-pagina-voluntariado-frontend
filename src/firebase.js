@@ -25,7 +25,7 @@ const app = initializeApp(firebaseConfig);
 
 var admin = require("firebase-admin");
 
-var serviceAccount = require("./src/serviceAccountKey.json");
+var serviceAccount = require("./serviceAccountKey.json");
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
     storageBucket: "pagina-voluntariado-frontend.appspot.com"
