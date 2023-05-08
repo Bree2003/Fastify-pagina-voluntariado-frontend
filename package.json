@@ -1,5 +1,8 @@
 {
   "name": "pagina-voluntariado-frontend",
+  "engines": {
+    "node": "16.x"
+  },
   "version": "1.0.0",
   "description": "Página web diseñada para las personas que estén interesadas en saber información y participar en voluntariados.",
   "main": "server.js",
